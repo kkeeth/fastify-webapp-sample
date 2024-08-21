@@ -8,12 +8,19 @@ importers:
 
   .:
     dependencies:
+      allure-codeceptjs:
+        specifier: 3.0.0-beta.10
+        version: 3.0.0-beta.10(codeceptjs@3.6.5(@babel/core@7.25.2)(@babel/preset-env@7.25.3(@babel/core@7.25.2))(@jest/environment@29.7.0)(@jest/types@29.6.3)(jest-environment-node@29.7.0)(react@18.2.0)(typescript@5.5.4))(mocha@10.6.0)
       codeceptjs:
         specifier: ^3.6.5
         version: 3.6.5(@babel/core@7.25.2)(@babel/preset-env@7.25.3(@babel/core@7.25.2))(@jest/environment@29.7.0)(@jest/types@29.6.3)(jest-environment-node@29.7.0)(react@18.2.0)(typescript@5.5.4)
       playwright:
         specifier: ^1.46.1
         version: 1.46.1
+    devDependencies:
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
 
 packages:
 
@@ -1083,6 +1090,24 @@ packages:
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
 
+  allure-codeceptjs@3.0.0-beta.10:
+    resolution: {integrity: sha512-9uwUzEqrLWDM6tQQ5bkwAuEYXxhmqMQKOUiUuyoDXKp6X107BpwGwTt14duS3GDkLc62JIzNZKIC6nD06NE2PA==}
+    peerDependencies:
+      codeceptjs: '>=2.3.6'
+
+  allure-js-commons@3.0.0-beta.10:
+    resolution: {integrity: sha512-LCfhDYjc6zQkbQYbFNmgVnwBO/izHaamJr1GImWgD4hdstoSPWbrzeUSjbD22ZZaSkxbhkW89/1Ljlgm/yO3Zg==}
+    peerDependencies:
+      allure-playwright: 3.0.0-beta.10
+    peerDependenciesMeta:
+      allure-playwright:
+        optional: true
+
+  allure-mocha@3.0.0-beta.10:
+    resolution: {integrity: sha512-7Rd56bjwd0Nvnz9badvDc76BQ+GQ1algZJnEhkhBGA5DS9X0AbkCoIGhRuurjcA9VS9U3KGcCdBqTd0+6rSfog==}
+    peerDependencies:
+      mocha: '>=6.2.0'
+
   anser@1.4.10:
     resolution: {integrity: sha512-hCv9AqTQ8ycjpSd3upOJd7vFwW1JaoYQ7tpham03GJ1ca8/65rqn0RpaWpItOAd6ylW9wAw6luXYPJIyPFVOww==}
 
@@ -1384,6 +1409,9 @@ packages:
   chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
 
+  charenc@0.0.2:
+    resolution: {integrity: sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==}
+
   check-error@2.1.1:
     resolution: {integrity: sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==}
     engines: {node: '>= 16'}
@@ -1560,6 +1588,9 @@ packages:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
 
+  crypt@0.0.2:
+    resolution: {integrity: sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==}
+
   css-to-xpath@0.1.0:
     resolution: {integrity: sha512-izIAc99mgThUsc6DkUIC0nfy3whEX4qhZ4TrRhundaRUGg4TDjqE5aMJ8YWAohH1UZcqrkYNuNvD8O0JFaCr0g==}
 
@@ -1688,6 +1719,10 @@ packages:
 
   dot-case@3.0.4:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
+
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
 
   dtrace-provider@0.8.8:
     resolution: {integrity: sha512-b7Z7cNtHPhH9EJhNNbbeqTcXB8LGFFZhq1PGgEvpeHlzd36bhbdTWoE/Ba/YguqpBSlAPKnARWhVlhunCMwfxg==}
@@ -2139,6 +2174,9 @@ packages:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
 
+  is-buffer@1.1.6:
+    resolution: {integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==}
+
   is-core-module@2.15.0:
     resolution: {integrity: sha512-Dd+Lb2/zvk9SKy1TGCt1wFJFo/MWBPMX5x7KcvLajWTGuomczdQX61PvY5yK6SVACwpoexWo81IfFyoKY2QnTA==}
     engines: {node: '>= 0.4'}
@@ -2487,6 +2525,9 @@ packages:
   matchit@1.1.0:
     resolution: {integrity: sha512-+nGYoOlfHmxe5BW5tE0EMJppXEwdSf8uBA1GTZC7Q77kbT35+VKLYJMzVNWCHSsga1ps1tPYFtFyvxvKzWVmMA==}
     engines: {node: '>=6'}
+
+  md5@2.3.0:
+    resolution: {integrity: sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==}
 
   memoize-one@5.2.1:
     resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
@@ -2966,6 +3007,10 @@ packages:
 
   proper-lockfile@3.2.0:
     resolution: {integrity: sha512-iMghHHXv2bsxl6NchhEaFck8tvX3F9cknEEh1SUpguUOBjN7PAAW9BLzmbc1g/mCD1gY3EE2EABBHPJfFdHFmA==}
+
+  properties@1.2.1:
+    resolution: {integrity: sha512-qYNxyMj1JeW54i/EWEFsM1cVwxJbtgPp8+0Wg9XjNaK6VE/c4oRi6PNu5p7w1mNXEIQIjV5Wwn8v8Gz82/QzdQ==}
+    engines: {node: '>=0.10'}
 
   proto-list@1.2.4:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
@@ -5461,6 +5506,27 @@ snapshots:
       require-from-string: 2.0.2
     optional: true
 
+  allure-codeceptjs@3.0.0-beta.10(codeceptjs@3.6.5(@babel/core@7.25.2)(@babel/preset-env@7.25.3(@babel/core@7.25.2))(@jest/environment@29.7.0)(@jest/types@29.6.3)(jest-environment-node@29.7.0)(react@18.2.0)(typescript@5.5.4))(mocha@10.6.0):
+    dependencies:
+      allure-js-commons: 3.0.0-beta.10
+      allure-mocha: 3.0.0-beta.10(mocha@10.6.0)
+      codeceptjs: 3.6.5(@babel/core@7.25.2)(@babel/preset-env@7.25.3(@babel/core@7.25.2))(@jest/environment@29.7.0)(@jest/types@29.6.3)(jest-environment-node@29.7.0)(react@18.2.0)(typescript@5.5.4)
+    transitivePeerDependencies:
+      - allure-playwright
+      - mocha
+
+  allure-js-commons@3.0.0-beta.10:
+    dependencies:
+      md5: 2.3.0
+      properties: 1.2.1
+
+  allure-mocha@3.0.0-beta.10(mocha@10.6.0):
+    dependencies:
+      allure-js-commons: 3.0.0-beta.10
+      mocha: 10.6.0
+    transitivePeerDependencies:
+      - allure-playwright
+
   anser@1.4.10:
     optional: true
 
@@ -5795,6 +5861,8 @@ snapshots:
 
   chardet@0.7.0: {}
 
+  charenc@0.0.2: {}
+
   check-error@2.1.1: {}
 
   checkit@0.7.0:
@@ -6087,6 +6155,8 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+  crypt@0.0.2: {}
+
   css-to-xpath@0.1.0:
     dependencies:
       bo-selector: 0.0.10
@@ -6243,6 +6313,8 @@ snapshots:
     dependencies:
       no-case: 3.0.4
       tslib: 2.6.3
+
+  dotenv@16.4.5: {}
 
   dtrace-provider@0.8.8:
     dependencies:
@@ -6766,6 +6838,8 @@ snapshots:
     dependencies:
       binary-extensions: 2.3.0
 
+  is-buffer@1.1.6: {}
+
   is-core-module@2.15.0:
     dependencies:
       hasown: 2.0.2
@@ -7167,6 +7241,12 @@ snapshots:
   matchit@1.1.0:
     dependencies:
       '@arr/every': 1.0.1
+
+  md5@2.3.0:
+    dependencies:
+      charenc: 0.0.2
+      crypt: 0.0.2
+      is-buffer: 1.1.6
 
   memoize-one@5.2.1:
     optional: true
@@ -7850,6 +7930,8 @@ snapshots:
       retry: 0.12.0
       signal-exit: 3.0.7
     optional: true
+
+  properties@1.2.1: {}
 
   proto-list@1.2.4: {}
 
